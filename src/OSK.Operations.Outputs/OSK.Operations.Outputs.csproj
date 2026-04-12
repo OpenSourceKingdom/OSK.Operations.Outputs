@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<LangVersion>12</LangVersion>
+		<TargetFramework>netstandard2.1</TargetFramework>
+		<Description>An implementation of the Result pattern that provides easy to use output objects for outputs, multi-outputs, and pagination. Able to provide diagnostic information and strongly-typed output statuses and details.</Description>
+		<PackageTags>OpenSourceKingdom, OpenSource, Operations, Outputs, Result, Pattern, Error, Response, Out, Response</PackageTags>
+		<Title>OSK.Operations.Outputs</Title>
+
+		<RepositoryUrl>https://github.com/OpenSourceKingdom/OSK.Operations.Outputs</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+		<NoWarn>CS1591</NoWarn>
+		<Authors>BlankDev117</Authors>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="PolySharp" Version="1.15.0">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+</Project>
