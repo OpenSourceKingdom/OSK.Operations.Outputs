@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="OSK.Extensions.Operations.Outputs.Logging/OSK.Extensions.Operations.Outputs.Logging.csproj" />
+  <Project Path="OSK.Operations.Outputs.UnitTests/OSK.Operations.Outputs.UnitTests.csproj" />
+  <Project Path="OSK.Operations.Outputs/OSK.Operations.Outputs.csproj" />
+</Solution>
