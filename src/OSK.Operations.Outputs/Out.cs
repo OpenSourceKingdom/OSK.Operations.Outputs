@@ -104,11 +104,17 @@ public static class Out
     public static Output Error(OutputStatus status, string message, OriginationSource? originationSource = null)
         => Error(new OutputCode(status), [message], originationSource);
 
+    public static Output<TData> Error<TData>(OutputStatus status, string message, OriginationSource? originationSource = null)
+        => Error<TData>(new OutputCode(status), default, [message], originationSource);
+
     public static Output Error<TData>(OutputStatus status, TData data, string message, OriginationSource? originationSource = null)
         => Error(new OutputCode(status), data, [message], originationSource);
     
     public static Output Error(OutputStatus status, IEnumerable<string> errors, OriginationSource? originationSource = null)
         => Error(new OutputCode(status), errors, originationSource);
+
+    public static Output<TData> Error<TData>(OutputStatus status, IEnumerable<string> errors, OriginationSource? originationSource = null)
+        => Error<TData>(new OutputCode(status), default, errors, originationSource);
 
     public static Output Error<TData>(OutputStatus status, TData data, IEnumerable<string> errors, OriginationSource? originationSource = null)
         => Error(new OutputCode(status), data, errors, originationSource);
