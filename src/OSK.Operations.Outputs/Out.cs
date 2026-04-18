@@ -101,6 +101,24 @@ public static class Out
 
     #region Error
 
+    public static Output Error(OutputStatus status, string message, OriginationSource? originationSource = null)
+        => Error(new OutputCode(status), [message], originationSource);
+
+    public static Output Error<TData>(OutputStatus status, TData data, string message, OriginationSource? originationSource = null)
+        => Error(new OutputCode(status), data, [message], originationSource);
+    
+    public static Output Error(OutputStatus status, IEnumerable<string> errors, OriginationSource? originationSource = null)
+        => Error(new OutputCode(status), errors, originationSource);
+
+    public static Output Error<TData>(OutputStatus status, TData data, IEnumerable<string> errors, OriginationSource? originationSource = null)
+        => Error(new OutputCode(status), data, errors, originationSource);
+
+    public static Output Error(OutputCode code, string message, OriginationSource? originationSource = null)
+        => Error(code, [message], originationSource);
+
+    public static Output Error<TData>(OutputCode code, TData data, string message, OriginationSource? originationSource = null)
+        => Error(code, data, [message], originationSource);
+
     public static Output Error(OutputCode code, IEnumerable<string> errors, OriginationSource? originationSource = null)
         => new(code, new ErrorInformation(errors is null ? [] : [.. errors]), originationSource)
         {
