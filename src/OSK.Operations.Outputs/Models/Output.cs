@@ -81,7 +81,7 @@ public class Output
     /// <typeparam name="TValue">The desired type to simulate</typeparam>
     /// <returns>An output that contains the same contextual information as the current output</returns>
     public virtual Output<TValue> As<TValue>()
-        => new(StatusCode, default);
+        => new(StatusCode, default, ErrorInformation, OriginationSource);
 
     /// <summary>
     /// Attempts to cast the output to another type. This may fail if the output has data attached.
