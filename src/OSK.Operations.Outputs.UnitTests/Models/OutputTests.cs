@@ -46,6 +46,32 @@ public class OutputTests
         Assert.Throws<InvalidOperationException>(output.As<int>);
     }
 
+    [Fact]
+    public void As_CalledOnFailedOutput_ReturnsExpectedOutput()
+    {
+        // Arrange
+        var output = Out.Error(OutputStatus.DataNotFound, "Not Found");
+
+        // Act
+        var typedOutput = output.As<int>();
+
+        // Assert
+        Assert.False(typedOutput.IsSuccessful);
+    }
+
+    [Fact]
+    public void As_CalledOnFaultedOutput_ReturnsExpectedOutput()
+    {
+        // Arrange
+        var output = Out.Fault(new Exception());
+
+        // Act
+        var typedOutput = output.As<int>();
+
+        // Assert
+        Assert.False(typedOutput.IsSuccessful);
+    }
+
     #endregion
 
     #region Validation
