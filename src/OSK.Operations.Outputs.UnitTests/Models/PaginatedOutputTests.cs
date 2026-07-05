@@ -34,6 +34,24 @@ public class PaginatedOutputTests
         Assert.Throws<ArgumentException>(() => new PaginatedOutput<int>(new OutputCode(OutputStatus.Success), null, 0, 10));
     }
 
+    [Theory]
+    [InlineData(null)]
+    [InlineData(10)]
+    public void Constructor_Valid_VaryingTotalValues_ReturnsSuccessfully(int? total)
+    {
+        // Arrange
+        int[] data = [1, 2, 3];
+
+        // Act
+        var page = new PaginatedOutput<int>(OutputCode.Success, data, 4, 10, total);
+
+        // Assert
+        Assert.Equal(data, page.Data);
+        Assert.Equal(4, page.Skip);
+        Assert.Equal(10, page.Take);
+        Assert.Equal(total, page.Total);
+    }
+
     #endregion
 
     #region AsPage
