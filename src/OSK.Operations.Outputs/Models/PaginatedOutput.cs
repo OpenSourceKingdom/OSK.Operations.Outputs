@@ -32,7 +32,7 @@ public class PaginatedOutput<TValue>: Output<IReadOnlyList<TValue>>
     {
         Skip = skip;
         Take = take;
-        Total = null;
+        Total = total;
 
         ValidateProperties();
     }
