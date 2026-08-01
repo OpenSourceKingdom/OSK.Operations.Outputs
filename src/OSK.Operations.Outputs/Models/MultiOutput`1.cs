@@ -1,5 +1,4 @@
-﻿using OSK.Operations.Outputs.Models;
-namespace OSK.Operations.Outputs.Models;
+﻿namespace OSK.Operations.Outputs.Models;
 
 
 /// <summary>

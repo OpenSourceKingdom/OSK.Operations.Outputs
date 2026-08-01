@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading;
-using OSK.Operations.Outputs.Internal;
 using OSK.Operations.Outputs.Models;
 
 namespace OSK.Operations.Outputs.Internal;

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using OSK.Operations.Outputs;
 using OSK.Operations.Outputs.Models;
 
 namespace OSK.Operations.Outputs;

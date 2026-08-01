@@ -1,6 +1,4 @@
-﻿using OSK.Operations.Outputs.Models;
-
-namespace OSK.Operations.Outputs.Models;
+﻿namespace OSK.Operations.Outputs.Models;
 
 /// <summary>
 /// A strongly-typed name for an origination of an output.
