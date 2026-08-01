@@ -1,6 +1,4 @@
-﻿using OSK.Operations.Outputs.Models;
-
-namespace OSK.Operations.Outputs.Models;
+﻿namespace OSK.Operations.Outputs.Models;
 
 /// <summary>
 /// A strongly-typed value that represents a function output detail code. This is meant to be used in conjunction with an <see cref="OutputStatus"/> to provide more detailed information about an output response. 

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using OSK.Operations.Outputs.Models;
 
 namespace OSK.Operations.Outputs.Models;
 
