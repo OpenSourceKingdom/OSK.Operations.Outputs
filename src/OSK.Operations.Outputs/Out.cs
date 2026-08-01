@@ -35,6 +35,16 @@ public static class Out
 
     #endregion
 
+    #region Updated
+
+    public static Output Updated()
+        => Status(OutputStatus.Updated);
+
+    public static Output<TData> Updated<TData>(TData data)
+        => Status(OutputStatus.Updated, data);
+
+    #endregion
+
     #region Generic Status
 
     public static Output Status(OutputStatus status)
